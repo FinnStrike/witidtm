@@ -8,21 +8,21 @@ html, body {
   --page-background-light: #fff;
   --page-text-light: #333;
   --switch-background-light: #4cf0ff;
-  --switch-border-light: #555;
+  --switch-border-light: #25273C;
     /*Dark Mode Colour Scheme*/
-  --page-background-dark: #333;
-  --page-text-dark: #fff;
+  --page-background-dark: #161722;
+  --page-text-dark: #E4E5F1;
   --switch-background-dark: #080037;
-  --switch-border-dark: #aaa;
+  --switch-border-dark: #CACDE8;
 }
 
 .page-body {
   font-family: 'Times New Roman', Times, serif, sans-serif;
-  line-height: 1.6;
+  line-height: 1.8;
   background-color: var(--page-background-light);
   color: var(--page-text-light);
   transition: background-color 0.5s, color 0.5s;
-  padding: 5px;
+  padding: 10px;
 }
 
 .header {
@@ -74,7 +74,7 @@ html, body {
 }
 
 .button:hover {
-  background: linear-gradient(to bottom, rgb(0, 195, 255), rgb(0, 150, 196));
+  background: linear-gradient(to bottom, #5816ff, #3300b3);
   text-decoration: none;
 }
 
@@ -114,7 +114,16 @@ html, body {
   height: 18px;
 }
 
-/* Dark mode styles */
+.home::before {
+  content: '';
+  background: url('./icons/house-solid.svg') center/cover;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+}
+
 #toggleSwitch:checked ~ .page-body {
   background-color: var(--page-background-dark);
   color: var(--page-text-dark);
@@ -124,7 +133,6 @@ html, body {
   color: var(--page-text-light);
 }
 
-/* Toggle switch styling */
 #toggleSwitch {
   display: none;
 }
@@ -169,6 +177,34 @@ html, body {
   margin-bottom: 3px;
 }
 
+.button-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button-list li {
+  width: 18%;
+  margin: 10px;
+}
+
+.button-list a {
+  max-width: 200px;
+  display: block;
+  padding: 8px 0px 8px 0px;
+  background: linear-gradient(to bottom, rgb(0, 72, 255), rgb(0, 50, 178));
+  color: #E4E5F1;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.3, 0.3);
+}
+
+.button-list a:hover {
+  background: linear-gradient(to bottom, #5816ff, #3300b3);
+}
+
 h1, h2, p, a {
   transition: color 0.5s;
   margin: 0;
@@ -189,15 +225,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 8px;
 }
 
 /* Responsive design for smaller screens */
