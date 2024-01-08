@@ -1,0 +1,249 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    /*Light Mode Colour Scheme*/
+  --page-background-light: #fff;
+  --page-text-light: #333;
+  --switch-background-light: #4cf0ff;
+  --switch-border-light: #555;
+    /*Dark Mode Colour Scheme*/
+  --page-background-dark: #333;
+  --page-text-dark: #fff;
+  --switch-background-dark: #080037;
+  --switch-border-dark: #aaa;
+}
+
+.page-body {
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+  line-height: 1.6;
+  background-color: var(--page-background-light);
+  color: var(--page-text-light);
+  transition: background-color 0.5s, color 0.5s;
+  padding: 5px;
+}
+
+.header {
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(0, 255, 204), rgb(0, 185, 148));
+  color: var(--page-text-light);
+  padding: 5px 5px 12px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  align-items: center;
+  z-index: 0;
+}
+
+.footer {
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(0, 255, 204), rgb(0, 185, 148));
+  color: var(--page-text-light);
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0.3, 0, 0);
+  position: sticky;
+  bottom: 0;
+  align-items: center;
+  z-index: 0;
+}
+
+.link-container {
+  max-width: 50%;
+  margin-left: 40%;
+  margin-top: -30px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button {
+  max-width: 180px;
+  align-items: center;
+  width: 180px;
+  padding: 6px 0px;
+  background: linear-gradient(to bottom, rgb(0, 72, 255), rgb(0, 50, 178));
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.3, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover {
+  background: linear-gradient(to bottom, rgb(0, 195, 255), rgb(0, 150, 196));
+  text-decoration: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.github::before {
+  content: '';
+  background: url('./icons/github.svg') center/cover;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+}
+
+.blackboard::before {
+  content: '';
+  background: url('./icons/chalkboard-solid.svg') center/cover;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+}
+
+.materials::before {
+  content: '';
+  background: url('./icons/book-solid.svg') center/cover;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Dark mode styles */
+#toggleSwitch:checked ~ .page-body {
+  background-color: var(--page-background-dark);
+  color: var(--page-text-dark);
+}
+
+#toggleSwitch:checked ~ .header {
+  color: var(--page-text-light);
+}
+
+/* Toggle switch styling */
+#toggleSwitch {
+  display: none;
+}
+
+#toggleLabel {
+  cursor: pointer;
+  position: fixed;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 20px;
+  background-color: var(--switch-background-light);
+  border: 3px solid var(--switch-border-light);
+  border-radius: 25px;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+
+#toggleSwitch:checked + #toggleLabel {
+  background-color: var(--switch-background-dark);
+  border: 3px solid var(--switch-border-dark);
+}
+
+#toggleSwitch + #toggleLabel::before {
+  content: '\1F31E'; /*Sun*/
+  font-size: 18px;
+  margin-left: 2px;
+  margin-right: auto;
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+#toggleSwitch:checked + #toggleLabel::before {
+  content: '\1F31D'; /*Moon*/
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: 2px;
+  margin-top: 1px;
+  margin-bottom: 3px;
+}
+
+h1, h2, p, a {
+  transition: color 0.5s;
+  margin: 0;
+}
+
+h1, h2 {
+  margin: 0 auto;
+}
+
+p {
+  margin: 0 auto;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+
+  .header {
+    padding-bottom: 1.2em;
+  }
+
+  .link-container {
+    max-width: 40%;
+    margin-left: 50%;
+    padding-top: 10px;
+  }
+
+  .button {
+    font-size: 0.5em;
+    max-width: 90px;
+    align-items: center;
+    width: 90px;
+    padding: 3px 0px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  #toggleLabel {
+    width: 25px;
+    height: 10px;
+  }
+
+  #toggleSwitch + #toggleLabel::before,
+  #toggleSwitch:checked + #toggleLabel::before{
+    font-size: 0.5em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}  
