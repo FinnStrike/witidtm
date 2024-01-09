@@ -4,6 +4,10 @@ html, body {
 }
 
 :root {
+    /*General Colours*/
+  --link-text-light: #007BFF;
+  --link-text-dark: #00c8ff;
+  --link-text-contrast: #E34879;
     /*Light Mode Colour Scheme*/
   --page-background-light: #fff;
   --page-text-light: #25273C;
@@ -19,10 +23,9 @@ html, body {
   --header-gradient-blue: linear-gradient(to bottom, rgb(0, 163, 255), rgb(0, 140, 178));
   --button-gradient-blue: linear-gradient(to bottom, rgb(0, 72, 255), rgb(0, 50, 178));
   --button-gradient-purple: linear-gradient(to bottom, #5816ff, #3300b3);
-    /*High Contrast Colour Scheme*/
-  --link-text-contrast: #E34879;
   --button-gradient-orange: linear-gradient(to bottom, rgb(255, 123, 0), rgb(173, 84, 0));
-  --button-gradient-pink: linear-gradient(to bottom, #ff0000, #b00000);
+  --button-gradient-pink: linear-gradient(to bottom, #E34879, #912749);
+  --button-gradient-red: linear-gradient(to bottom, #ff0000, #b00000);
 
 }
 
@@ -74,7 +77,7 @@ html, body {
   align-items: center;
   width: 180px;
   padding: 6px 0px;
-  background: var(--button-gradient-blue);
+  background: var(--button-gradient-purple);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -84,7 +87,7 @@ html, body {
 }
 
 .button:hover {
-  background: var(--button-gradient-purple);
+  background: var(--button-gradient-pink);
   text-decoration: none;
 }
 
@@ -144,7 +147,11 @@ html, body {
 }
 
 #toggleSwitch:checked ~ .page-body a:not(.button-list a) {
-  color: #00c8ff;
+  color: var(--link-text-dark);
+}
+
+#toggleSwitch:checked ~ .page-body a:not(.button-list a):hover {
+  color: var(--link-text-contrast);
 }
 
 #toggleSwitch {
@@ -216,10 +223,10 @@ html, body {
 }
 
 .button-list a:hover {
-  background: var(--button-gradient-purple);
+  background: var(--button-gradient-pink);
 }
 
-h1, h2, p, a {
+h1, h2, p {
   transition: color 0.5s;
   margin: 0;
 }
@@ -233,12 +240,12 @@ p {
 }
 
 a {
-  color: #007BFF;
-  text-decoration: none;
+  margin: 0 auto;
+  color: var(--link-text-light);
 }
 
-a:hover {
-  text-decoration: underline;
+.page-body a:not(.button-list a):hover {
+  color: var(--link-text-contrast);
 }
 
 /* Responsive design for smaller screens */
