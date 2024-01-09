@@ -6,7 +6,7 @@ html, body {
 :root {
     /*Light Mode Colour Scheme*/
   --page-background-light: #fff;
-  --page-text-light: #333;
+  --page-text-light: #25273C;
   --switch-background-light: #4cf0ff;
   --switch-border-light: #25273C;
     /*Dark Mode Colour Scheme*/
@@ -14,6 +14,16 @@ html, body {
   --page-text-dark: #E4E5F1;
   --switch-background-dark: #080037;
   --switch-border-dark: #CACDE8;
+    /*Gradients*/
+  --header-gradient-green: linear-gradient(to bottom, rgb(0, 255, 204), rgb(0, 185, 148));
+  --header-gradient-blue: linear-gradient(to bottom, rgb(0, 163, 255), rgb(0, 140, 178));
+  --button-gradient-blue: linear-gradient(to bottom, rgb(0, 72, 255), rgb(0, 50, 178));
+  --button-gradient-purple: linear-gradient(to bottom, #5816ff, #3300b3);
+    /*High Contrast Colour Scheme*/
+  --link-text-contrast: #E34879;
+  --button-gradient-orange: linear-gradient(to bottom, rgb(255, 123, 0), rgb(173, 84, 0));
+  --button-gradient-pink: linear-gradient(to bottom, #ff0000, #b00000);
+
 }
 
 .page-body {
@@ -27,7 +37,7 @@ html, body {
 
 .header {
   width: 100%;
-  background: linear-gradient(to bottom, rgb(0, 255, 204), rgb(0, 185, 148));
+  background: var(--header-gradient-blue);
   color: var(--page-text-light);
   padding: 5px 5px 12px 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -39,7 +49,7 @@ html, body {
 
 .footer {
   width: 100%;
-  background: linear-gradient(to bottom, rgb(0, 255, 204), rgb(0, 185, 148));
+  background: var(--header-gradient-blue);
   color: var(--page-text-light);
   padding: 5px;
   box-shadow: 0 4px 8px rgba(0, 0.3, 0, 0);
@@ -64,7 +74,7 @@ html, body {
   align-items: center;
   width: 180px;
   padding: 6px 0px;
-  background: linear-gradient(to bottom, rgb(0, 72, 255), rgb(0, 50, 178));
+  background: var(--button-gradient-blue);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -74,7 +84,7 @@ html, body {
 }
 
 .button:hover {
-  background: linear-gradient(to bottom, #5816ff, #3300b3);
+  background: var(--button-gradient-purple);
   text-decoration: none;
 }
 
@@ -131,6 +141,10 @@ html, body {
 
 #toggleSwitch:checked ~ .header {
   color: var(--page-text-light);
+}
+
+#toggleSwitch:checked ~ .page-body a:not(.button-list a) {
+  color: #00c8ff;
 }
 
 #toggleSwitch {
@@ -193,7 +207,7 @@ html, body {
   max-width: 200px;
   display: block;
   padding: 8px 0px 8px 0px;
-  background: linear-gradient(to bottom, rgb(0, 72, 255), rgb(0, 50, 178));
+  background: var(--button-gradient-blue);
   color: #E4E5F1;
   text-align: center;
   text-decoration: none;
@@ -202,7 +216,7 @@ html, body {
 }
 
 .button-list a:hover {
-  background: linear-gradient(to bottom, #5816ff, #3300b3);
+  background: var(--button-gradient-purple);
 }
 
 h1, h2, p, a {
