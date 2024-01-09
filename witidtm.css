@@ -26,9 +26,9 @@ html, body {
   --button-gradient-orange: linear-gradient(to bottom, rgb(255, 123, 0), rgb(173, 84, 0));
   --button-gradient-pink: linear-gradient(to bottom, #E34879, #912749);
   --button-gradient-red: linear-gradient(to bottom, #ff0000, #b00000);
-
 }
 
+/*Page Properties*/
 .page-body {
   font-family: 'Times New Roman', Times, serif, sans-serif;
   line-height: 1.8;
@@ -38,6 +38,12 @@ html, body {
   padding: 10px;
 }
 
+#toggleSwitch:checked ~ .page-body {
+  background-color: var(--page-background-dark);
+  color: var(--page-text-dark);
+}
+
+/*Header Elements*/
 .header {
   width: 100%;
   background: var(--header-gradient-blue);
@@ -50,16 +56,8 @@ html, body {
   z-index: 0;
 }
 
-.footer {
-  width: 100%;
-  background: var(--header-gradient-blue);
+#toggleSwitch:checked ~ .header {
   color: var(--page-text-light);
-  padding: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0.3, 0, 0);
-  position: sticky;
-  bottom: 0;
-  align-items: center;
-  z-index: 0;
 }
 
 .link-container {
@@ -72,7 +70,7 @@ html, body {
   text-decoration: none;
 }
 
-.button {
+.button { /*Header Links*/
   max-width: 180px;
   align-items: center;
   width: 180px;
@@ -91,7 +89,7 @@ html, body {
   text-decoration: none;
 }
 
-.icon {
+.icon { /*Button Icons*/
   width: 20px;
   height: 20px;
   margin-right: 10px;
@@ -137,23 +135,7 @@ html, body {
   height: 18px;
 }
 
-#toggleSwitch:checked ~ .page-body {
-  background-color: var(--page-background-dark);
-  color: var(--page-text-dark);
-}
-
-#toggleSwitch:checked ~ .header {
-  color: var(--page-text-light);
-}
-
-#toggleSwitch:checked ~ .page-body a:not(.button-list a) {
-  color: var(--link-text-dark);
-}
-
-#toggleSwitch:checked ~ .page-body a:not(.button-list a):hover {
-  color: var(--link-text-contrast);
-}
-
+/*Light/Dark Mode Switch*/
 #toggleSwitch {
   display: none;
 }
@@ -198,6 +180,7 @@ html, body {
   margin-bottom: 3px;
 }
 
+/*Button List Elements for Lecture Links*/
 .button-list {
   list-style-type: none;
   padding: 0;
@@ -226,6 +209,38 @@ html, body {
   background: var(--button-gradient-pink);
 }
 
+/*Footer Element*/
+.footer {
+  width: 100%;
+  background: var(--header-gradient-blue);
+  color: var(--page-text-light);
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0.3, 0, 0);
+  position: sticky;
+  bottom: 0;
+  align-items: center;
+  z-index: 0;
+}
+
+/*Link Styling*/
+a {
+  margin: 0 auto;
+  color: var(--link-text-light);
+}
+
+.page-body a:not(.button-list a):hover {
+  color: var(--link-text-contrast);
+}
+
+#toggleSwitch:checked ~ .page-body a:not(.button-list a) {
+  color: var(--link-text-dark);
+}
+
+#toggleSwitch:checked ~ .page-body a:not(.button-list a):hover {
+  color: var(--link-text-contrast);
+}
+
+/*General Styling*/
 h1, h2, p {
   transition: color 0.5s;
   margin: 0;
@@ -239,16 +254,7 @@ p {
   margin: 0 auto;
 }
 
-a {
-  margin: 0 auto;
-  color: var(--link-text-light);
-}
-
-.page-body a:not(.button-list a):hover {
-  color: var(--link-text-contrast);
-}
-
-/* Responsive design for smaller screens */
+/* Responsive design for smaller screens - In Progress*/
 @media screen and (max-width: 768px) {
 
   .header {
