@@ -12,6 +12,7 @@ install_python3:
 	apt-get install -y python3
 
 install_bs4:
+# Documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 	pip install bs4
 
 # Create html pages from README.md
