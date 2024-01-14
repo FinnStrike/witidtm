@@ -14,10 +14,12 @@ We'll be using the TCD
 for assignments etc. Apologies that only registered students can see that
 material.
 
-We have a [policy](llm-policy.md) for use of AI tools when doing 
+We have a [policy](llm-policy.html) for use of AI tools when doing 
 assignments.
 
-Lecture slides etc are [below](#materials).
+<Insert Actual Link Here>
+
+Lecture slides etc are [here](materials.html).
 
 ## Lecture/Online Session Schedule
 

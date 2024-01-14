@@ -3,7 +3,9 @@
 Lecture content will accumulate [here](./lectures/2023-2024/) as we go.  Be
 aware that the content will change, even sometimes at the last minute!
 
-You can look at the materials from previous years [below](#oldlectureslides) or
+<Insert Actual Link Here>
+
+You can look at the materials from previous years [here](oldMaterials.html) or
 the [2019 stuff here](./lectures/2019-2020/).  This year's content will re-use
 some of earlier stuff, likely modifed, and some things will be new. 
 

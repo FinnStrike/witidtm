@@ -216,7 +216,7 @@ html, body {
   color: var(--page-text-light);
   padding: 5px;
   box-shadow: 0 4px 8px rgba(0, 0.3, 0, 0);
-  position: sticky;
+  position: relative;
   bottom: 0;
   align-items: center;
   z-index: 0;
