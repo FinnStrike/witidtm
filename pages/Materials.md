@@ -17,6 +17,8 @@ recordings](https://down.dsg.cs.tcd.ie/witidtm-recordings/2020/) if you want.
 
 Stephen's sessions:
 
+<Button-List>
+
 - [Introduction](lectures/2023-2024/100-intro.pdf)
 - [The Web](lectures/2023-2024/200-web.pdf)
 - [2023 survey results](lectures/2023-2024/survey2023.pdf)
@@ -30,15 +32,21 @@ Stephen's sessions:
 
 Eoin's sessions:
 
+<Button-List>
+
 - [Law-1](lectures/2023-2024/law-1.pdf)
 - [Law-2](lectures/2023-2024/law-2.pdf)
 
 Dave's sessions:
 
+<Button-List>
+
 - [AI-ethics1.pdf](lectures/2023-2024/AI-ethics1.pdf)
 - [AI-ethics2.pdf](lectures/2023-2024/AI-ethics2.pdf)
 
 Lab slides:
+
+<Button-List>
 
 - [labs](lectures/2023-2024/labs.pdf)
 - [ai-lab](lectures/2023-2024/ai-lab.pdf)

@@ -172,7 +172,7 @@ class PathBasedSplitter(Splitter):
             self.process_stream(stream, in_file_path.name, out_path)
 
     def print_stats(self):
-        print("Splittig result:")
+        print("Splitting result:")
         print(f"- {self.stats.in_files} input file(s) ({self.in_path})")
         print(f"- {self.stats.chapters} extracted chapter(s)")
         print(f"- {self.stats.new_out_files} new output file(s) ({self.out_path})")
